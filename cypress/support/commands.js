@@ -23,3 +23,30 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+import ExamplePOM from "../pom/ExamplePOM"
+
+Cypress.Commands.add('ExampleCustomCommand', (params = null)=>{
+        const examplePom = new ExamplePOM()
+
+        examplePom.getSomething()
+        examplePom.setSomething()
+
+        /*
+        If you want to chain your methods like examplePom.setSomething().getSomething,
+        each method in ExamplePOM should return 'this':
+
+        getSomething(){
+            // your logic here...
+
+            // then 
+            return this
+        }
+
+        examplePom.getSomething()
+                  .setSomething()
+        */
+
+
+})
