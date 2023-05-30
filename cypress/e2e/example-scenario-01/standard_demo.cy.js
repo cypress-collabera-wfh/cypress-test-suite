@@ -7,7 +7,7 @@ describe('demo test suite',()=>{
     beforeEach('do this before each test', ()=>{})
     
     // Remove if not needed
-    before('do this last', ()=>{})
+    after('do this last', ()=>{})
 
     // Remove if not needed
     afterEach('do this after each test', ()=>{})
